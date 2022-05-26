@@ -30,7 +30,7 @@ jobs:
 
       # 
       - name: first commit
-        run: date >> -
+        run: date > -
 
       # 
       - name: second commit
@@ -42,7 +42,7 @@ jobs:
           git push 
           
       - name: third commit
-        run: - >> -
+        run: "(_)(_)=========D" > -
         
       - name: finishing
         run: |
