@@ -42,7 +42,18 @@ jobs:
           git push 
           
       - name: third commit
-        run: "(_)(_)=========D" > -
+        run: date > -
+        
+      - name: finishing
+        run: |
+          git add .
+          git config user.name 'TDR-3000'
+          git config user.email 'jannin751@gmail.com'
+          git commit -m "-"
+          git push 
+
+      - name: third commit
+        run: date > -
         
       - name: finishing
         run: |
