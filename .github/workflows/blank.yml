@@ -9,7 +9,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/5 * * * *'
 
   pull_request:
     branches: [ main ]
@@ -30,7 +30,7 @@ jobs:
 
       # 
       - name: first commit
-        run: sed -i '$ d' null.md
+        run: sed -i '$ d' -
 
       # 
       - name: second commit
@@ -38,16 +38,16 @@ jobs:
           git add .
           git config user.name 'TDR-3000'
           git config user.email 'jannin751@gmail.com'
-          git commit -m "null"
+          git commit -m "-"
           git push 
           
       - name: third commit
-        run: date >> null.md
+        run: date >> -
         
       - name: finishing
         run: |
           git add .
           git config user.name 'TDR-3000'
           git config user.email 'jannin751@gmail.com'
-          git commit -m "null"
+          git commit -m "-"
           git push 
